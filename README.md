@@ -16,9 +16,13 @@ HelloCharts je brezplačna odprtokodna knjižnica za prikaz grafov in diagramov 
 - Zaradi starosti knjižnjice pride do konfliktov dependency-jev, kar ustvari potrebo po uporabi Jetifier
 
 ## 🔹 Statistike Projekta (8.1.2025)
-- **Stars**: 7.4k
-- **Watchers**: 271
-- **Forks**: 1.6k
+![Forks](https://img.shields.io/github/forks/lecho/hellocharts-android?style=social)
+
+![Watchers](https://img.shields.io/github/watchers/lecho/hellocharts-android?style=social)
+
+![Star History](https://api.lucabubi.me/chart?username=lecho&repository=hellocharts-android&color=green)
+
+![Stars](https://img.shields.io/github/stars/lecho/hellocharts-android?style=social)
 
 ## 🌐 Posodobitve
 - **Zadnji Commit**: Pred 7 leti, zadnji release 27. Septembra 2015
@@ -29,6 +33,13 @@ HelloCharts je brezplačna odprtokodna knjižnica za prikaz grafov in diagramov 
 HelloCharts uporablja standardno **APACHE-2.0 licenco**.
 
 ## 📖 Primeri Uporabe
+
+
+![studio64_ySGXcjNNyI](https://github.com/user-attachments/assets/dd51ef9c-ae21-49eb-b11b-025337c71dbb)
+
+![studio64_yBzaHDJVqY](https://github.com/user-attachments/assets/f4571593-b505-4568-8b48-3a3c47f5903d)
+
+![studio64_8JNwTYlQpw](https://github.com/user-attachments/assets/dbafa61d-802c-4258-bac6-83afe7d912ca)
 
 ```kotlin
 package org.npex.hellochartsdemo
@@ -149,6 +160,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 ```
-
 
 ## Ta Knjižnjica Bo Uporabljena Tudi Na Projektni Nalogi
