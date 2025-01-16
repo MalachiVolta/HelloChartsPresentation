@@ -2,7 +2,8 @@
 [HelloCharts Repo](https://github.com/lecho/hellocharts-android)
 
 ## 🕹️ Zakaj HelloCharts?
-HelloCharts je brezplačna odprtokodna knjižnica za prikaz grafov in diagramov v Android aplikacijah. Je zelo enostavna za uporabo in ponuja veliko različnih opcij za prikaz podatkov v grafih
+HelloCharts je brezplačna odprtokodna knjižnica za prikaz grafov in diagramov v Android aplikacijah. Je zelo enostavna za uporabo in ponuja veliko različnih opcij za prikaz želenih podatkov v različnih oblikah.
+Omogoča tudi interaktivnost s temi grafi, da lahko podatke bolj podrobno opazujemo in analiziramo.
 
 ## 🔄 Prednosti
 - Je popolnoma brezplačna
@@ -30,77 +31,14 @@ HelloCharts je brezplačna odprtokodna knjižnica za prikaz grafov in diagramov 
 - **Issues**: Ima 283 issues, samo niso nobeni dovolj rizični, da bi vplivali na povprečno uporabo
 
 ## 🛡️ Licenca
-HelloCharts uporablja standardno **APACHE-2.0 licenco**.
+HelloCharts uporablja standardno **APACHE-2.0 licenco**. 
+Apache 2.0 licenca omogoča prosto uporabo, spreminjanje in distribucijo programske opreme, pod pogojem, da se ohranijo zapisi o prejšnjih avtorjih.
 
 ## 📖 Primeri Uporabe
-
-
-![studio64_ySGXcjNNyI](https://github.com/user-attachments/assets/dd51ef9c-ae21-49eb-b11b-025337c71dbb)
-
-![studio64_yBzaHDJVqY](https://github.com/user-attachments/assets/f4571593-b505-4568-8b48-3a3c47f5903d)
 
 ![studio64_8JNwTYlQpw](https://github.com/user-attachments/assets/dbafa61d-802c-4258-bac6-83afe7d912ca)
 
 ```kotlin
-package org.npex.hellochartsdemo
-
-import android.os.Bundle
-import android.widget.Button
-import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
-import lecho.lib.hellocharts.model.BubbleChartData
-import lecho.lib.hellocharts.model.BubbleValue
-import lecho.lib.hellocharts.model.Line
-import lecho.lib.hellocharts.model.LineChartData
-import lecho.lib.hellocharts.model.PieChartData
-import lecho.lib.hellocharts.model.PointValue
-import lecho.lib.hellocharts.model.SliceValue
-import lecho.lib.hellocharts.model.ValueShape
-import lecho.lib.hellocharts.util.ChartUtils
-import lecho.lib.hellocharts.view.BubbleChartView
-import lecho.lib.hellocharts.view.LineChartView
-import lecho.lib.hellocharts.view.PieChartView
-
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var chartContainer: FrameLayout
-    private lateinit var lineChartView: LineChartView
-    private lateinit var bubbleChartView: BubbleChartView
-    private lateinit var pieChartView: PieChartView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        chartContainer = findViewById(R.id.chartContainer)
-
-        lineChartView = createLineChart()
-        bubbleChartView = createBubbleChart()
-        pieChartView = createPieChart()
-
-        val lineChartButton = findViewById<Button>(R.id.lineChartButton)
-        val bubbleChartButton = findViewById<Button>(R.id.bubbleChartButton)
-        val pieChartButton = findViewById<Button>(R.id.pieChartButton)
-
-        lineChartButton.setOnClickListener {
-            switchChart(lineChartView)
-        }
-        bubbleChartButton.setOnClickListener {
-            switchChart(bubbleChartView)
-        }
-        pieChartButton.setOnClickListener {
-            switchChart(pieChartView)
-        }
-
-        switchChart(lineChartView)
-    }
-
-    private fun switchChart(chartView: android.view.View) {
-        chartContainer.removeAllViews()
-        chartContainer.addView(chartView)
-    }
-
-
     private fun createLineChart(): LineChartView {
         val lineChartView = LineChartView(this)
         val lineData = LineChartData().apply {
@@ -123,7 +61,11 @@ class MainActivity : AppCompatActivity() {
         lineChartView.lineChartData = lineData
         return lineChartView
     }
+```
 
+![studio64_ySGXcjNNyI](https://github.com/user-attachments/assets/dd51ef9c-ae21-49eb-b11b-025337c71dbb)
+
+```kotlin
     private fun createBubbleChart(): BubbleChartView {
         val bubbleChartView = BubbleChartView(this)
         val bubbleData = BubbleChartData().apply {
@@ -144,6 +86,11 @@ class MainActivity : AppCompatActivity() {
         return bubbleChartView
     }
 
+```
+
+![studio64_yBzaHDJVqY](https://github.com/user-attachments/assets/f4571593-b505-4568-8b48-3a3c47f5903d)
+
+```kotlin
     private fun createPieChart(): PieChartView {
         val pieChartView = PieChartView(this)
         val pieData = PieChartData().apply {
@@ -161,4 +108,6 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-## Ta Knjižnjica Bo Uporabljena Tudi Na Projektni Nalogi
+## Uporaba v projektni nalogi
+
+![studio64_DUX526r5uW](https://github.com/user-attachments/assets/2fc9e815-43ca-4513-b2bf-a7fd51224a10)
